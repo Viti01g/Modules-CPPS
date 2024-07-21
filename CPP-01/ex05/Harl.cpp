@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 12:15:19 by VR                #+#    #+#             */
-/*   Updated: 2024/07/12 15:29:59 by VR               ###   ########.fr       */
+/*   Updated: 2024/07/21 13:12:15 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,29 @@ void Harl::error()
 
 void Harl::complain(std::string level)
 {
-	
+	std::string levels[4] = {"debug", "info", "warning", "error"};
+	int i = 0;
+	for (i = 0; i < 4; i++)
+	{
+		if (levels[i] == level)
+			break;
+	}
+	switch (i)
+	{
+		case 0:
+			this->debug();
+			break;
+		case 1:
+			this->info();
+			break;
+		case 2:
+			this->warning();
+			break;
+		case 3:
+			this->error();
+			break;
+		default:
+			std::cout << "Dont like this option." << std::endl;
+			break;
+	}
 }
