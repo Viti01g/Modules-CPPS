@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: VR <VR@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/10 17:20:23 by vruiz-go          #+#    #+#              #
-#    Updated: 2024/07/12 12:15:47 by VR               ###   ########.fr        #
+#    Created: 2024/07/12 10:47:12 by VR                #+#    #+#              #
+#    Updated: 2024/07/12 10:47:35 by VR               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = megaphone
+NAME = ex04
 
-SRC = megaphone.cpp
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

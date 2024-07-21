@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:27:47 by VR                #+#    #+#             */
-/*   Updated: 2024/07/11 16:16:08 by VR               ###   ########.fr       */
+/*   Updated: 2024/07/12 15:30:50 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int main(){
     Weapon gun;
 	gun.setType("m4");
 
-    HumanA bob("Bob", gun);
+    HumanA bob("Viti", gun);
     bob.Attack();
     gun.setType("other type of gun");
     bob.Attack();
 
-    HumanB jim("Jim");
+    HumanB jim("Govi");
     jim.setWeapon(gun);
     jim.Attack();
     gun.setType("ak-47");
