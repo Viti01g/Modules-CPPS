@@ -6,7 +6,7 @@
 #    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:15:03 by VR                #+#    #+#              #
-#    Updated: 2024/08/20 15:35:34 by vruiz-go         ###   ########.fr        #
+#    Updated: 2024/08/20 15:39:08 by vruiz-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex00
+NAME = ex01
 
 SRC = main.cpp Fixed.cpp
 

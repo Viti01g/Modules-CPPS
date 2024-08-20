@@ -1,29 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Filter.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/26 18:25:21 by VR                #+#    #+#             */
-/*   Updated: 2024/07/26 18:54:04 by VR               ###   ########.fr       */
+/*   Created: 2024/08/20 15:38:57 by vruiz-go          #+#    #+#             */
+/*   Updated: 2024/08/20 15:39:19 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef FILTER_HPP
-# define FILTER_HPP
-
-# include <iostream>
-# include <string>
-
-class Fixed
-{
-	private:
-		int	fixed_point_value;
-		static const int fractional_bits;
-	public:
-		Fixed();
-		~Fixed();
-};
-
-# endif
