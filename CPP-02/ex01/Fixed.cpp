@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/26 18:25:15 by VR                #+#    #+#             */
-/*   Updated: 2024/08/20 16:01:22 by vruiz-go         ###   ########.fr       */
+/*   Created: 2024/08/20 15:43:26 by vruiz-go          #+#    #+#             */
+/*   Updated: 2024/08/20 16:50:13 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
-	this->fixed_point_value = 0;
 	return ;
 }
 
@@ -42,13 +41,46 @@ Fixed &Fixed::operator=(const Fixed &other_fixed)
 
 int	Fixed::getRawBits(void)const
 {
-	std::cout << "GetRawBits member function called" << std::endl;
 	return (this->fixed_point_value);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	std::cout << "SetRawBits member function called" << std::endl;
 	this->fixed_point_value = raw;
 	return ;
+}
+
+Fixed::Fixed(const int val)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->fixed_point_value = roundf(val *(1 << fractional_bits));
+	return ;
+}
+
+Fixed::Fixed(const float valu)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->fixed_point_value = roundf(valu *(1 << fractional_bits));
+	return ;
+}
+
+float Fixed::toFloat(void)const
+{
+	float new_num;
+
+	new_num = this->getRawBits() / (double)(1 << fractional_bits);
+	return (new_num);
+}
+
+int Fixed::toInt(void)const
+{
+	int	new_num;
+	new_num = roundf(this->getRawBits() / (double)(1 << fractional_bits));
+	return (new_num);
+}
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
+{
+	out << fixed.toFloat() << std::endl;
+	return out;
 }
