@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:43:12 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/08/20 16:48:56 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:30:10 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,28 @@ class Fixed
 		Fixed(const float valu);
 		float toFloat(void)const;
 		int toInt(void)const;
+
+		bool operator>(const Fixed &other_fixed);
+		bool operator<(const Fixed &other_fixed);
+		bool operator>=(const Fixed &other_fixed);
+		bool operator<=(const Fixed &other_fixed);
+		bool operator==(const Fixed &other_fixed);
+		bool operator!=(const Fixed &other_fixed);
+
+		float operator+(const Fixed &other_fixed);
+		float operator-(const Fixed &other_fixed);
+		float operator*(const Fixed &other_fixed);
+		float operator/(const Fixed &other_fixed);
+
+		Fixed &operator++();
+		Fixed &operator--();
+		Fixed operator++(int);
+		Fixed operator--(int);
+
+		static Fixed &min(Fixed &fixed1, Fixed &fixed2);
+		static const Fixed &min(Fixed const &fixed1, Fixed const &fixed2);
+		static Fixed &max(Fixed &fixed1, Fixed &fixed2);
+		static const Fixed &max(Fixed const &fixed1, Fixed const &fixed2);
 };
 
 std::ostream& operator<<(std::ostream& stream, const Fixed& fixed);

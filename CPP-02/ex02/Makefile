@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
+#    By: VR <VR@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:15:03 by VR                #+#    #+#              #
-#    Updated: 2024/08/20 15:39:08 by vruiz-go         ###   ########.fr        #
+#    Updated: 2024/08/21 16:33:44 by VR               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex01
+NAME = ex02
 
 SRC = main.cpp Fixed.cpp
 
