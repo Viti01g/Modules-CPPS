@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:45:48 by VR                #+#    #+#             */
-/*   Updated: 2024/08/24 14:40:23 by VR               ###   ########.fr       */
+/*   Updated: 2024/09/13 18:08:18 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ScavTrap : public ClapTrap
 		~ScavTrap();
 
 		void GuardGate();
-		void attack(std::string &target);
+		void attack(const std::string &target);
 } ;
 
 # endif

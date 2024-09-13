@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 15:36:49 by VR                #+#    #+#             */
-/*   Updated: 2024/08/23 19:58:22 by VR               ###   ########.fr       */
+/*   Updated: 2024/09/13 16:54:21 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string name;
 		int health;
 		int energy;
