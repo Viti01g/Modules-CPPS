@@ -6,7 +6,7 @@
 #    By: VR <VR@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:15:03 by VR                #+#    #+#              #
-#    Updated: 2024/09/17 14:09:30 by VR               ###   ########.fr        #
+#    Updated: 2024/09/16 17:46:09 by VR               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex01
+NAME = ex02
 
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
