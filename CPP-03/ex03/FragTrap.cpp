@@ -1,8 +1,16 @@
-#include "FragTrap.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/19 15:50:14 by vruiz-go          #+#    #+#             */
+/*   Updated: 2024/09/19 15:50:15 by vruiz-go         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/**
- * ! Orthodox canonical needs:
- */
+#include "FragTrap.hpp"
 
 FragTrap::FragTrap( void ): ClapTrap(100, 100, 30, "Default")
 {
@@ -32,10 +40,6 @@ FragTrap::~FragTrap( void )
 	std::cout << "FragTrap " << this->_name << " destructor called" << std::endl;
 }
 
-/**
- * ! Demanded by exercice:
- */
-
 FragTrap::FragTrap( std::string name ): ClapTrap(100, 100, 30, name)
 {
 	std::cout << "FragTrap " << this->_name << " constructor called" << std::endl;
@@ -48,10 +52,6 @@ void	FragTrap::highFivesGuys( void )
 	std::cout << "FragTrap " << this->_name << "requests a high five!(press enter to high five)";
 	std::getline(std::cin, five);
 }
-
-/**
- * ! Not demanded by exercice, made for testing:
- */
 
 int	FragTrap::getAd( void )
 {

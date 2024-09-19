@@ -1,8 +1,16 @@
-#include "ClapTrap.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/19 15:50:36 by vruiz-go          #+#    #+#             */
+/*   Updated: 2024/09/19 15:50:38 by vruiz-go         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/**
- * ! Orthodox canonical needs:
- */
+#include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap( void ): _name("Default"), _HP(10), _EP(10), _AD(0)
 {
@@ -31,11 +39,6 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap)
 	}
 	return (*this);
 }
-
-
-/**
- * ! Demanded by exercice:
- */
 
 ClapTrap::ClapTrap(std::string name): _name(name), _HP(10), _EP(10), _AD(0)
 {

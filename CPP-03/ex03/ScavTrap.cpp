@@ -1,20 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/19 15:49:03 by vruiz-go          #+#    #+#             */
+/*   Updated: 2024/09/19 15:49:22 by vruiz-go         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
-
-/**
- * ! Orthodox canonical needs:
- */
-
-/**
- *	In order to initialize the previously private variables of the class ClapTrap, we have to change them to protected.
- *	A protected variable is like a private variable but it is accesible from a subclass. In this case, if _HP, _ED, _AD and _name
- *		where still private, we couldn't initialize those variables the way we wanted.
- *
- *	Once the variables are now Protected, there are two ways to initalize with a different value.
- *		1 - Use this->variable = value;
- *		2 - Create another constructor in the base class that receives the variables that we want.
- *	I prefer the second one, but both ways are valid. The diference is that in the second way the basic constructor of the base class
- *		is called, and then you change its vaue, while in the second one you already call a constructor that does that for you.
- */
 
 ScavTrap::ScavTrap( void ): ClapTrap(100, 50, 20, "Default")
 {
@@ -44,10 +40,6 @@ ScavTrap &ScavTrap::operator=( const ScavTrap &scavtrap)
 	return (*this);	
 }
 
-/**
- * ! Demanded by exercice:
- */
-
 ScavTrap::ScavTrap( std::string name ): ClapTrap(100, 50, 20, name)
 {
 	std::cout << "ScavTrap " << this->_name << " constructor called" << std::endl;
@@ -57,10 +49,6 @@ void	ScavTrap::guardGate( void )
 {
 	std::cout << this->_name << " ScavTrap is now in Gate keeper mode" << std::endl;
 }
-
-/**
- * ! Not demanded by exercice, made for testing:
- */
 
 int	ScavTrap::getAd( void )
 {
