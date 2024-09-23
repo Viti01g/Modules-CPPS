@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:36:27 by VR                #+#    #+#             */
-/*   Updated: 2024/09/18 16:15:53 by VR               ###   ########.fr       */
+/*   Updated: 2024/09/23 13:57:26 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 
 class Dog : public Animal
 {
-	Dog();
-	virtual ~Dog();
-	Dog(const Dog &copy);
-	Dog &operator=(const Dog &assign);
+	public:
+		Dog();
+		virtual ~Dog();
+		Dog(const Dog &copy);
+		Dog &operator=(const Dog &assign);
 
-	const void MakeSound();
+		void MakeSound() const;
 } ;
 
 # endif

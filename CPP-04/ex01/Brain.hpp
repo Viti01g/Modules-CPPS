@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:36:30 by VR                #+#    #+#             */
-/*   Updated: 2024/09/23 13:55:24 by VR               ###   ########.fr       */
+/*   Created: 2024/09/23 18:01:34 by VR                #+#    #+#             */
+/*   Updated: 2024/09/23 20:33:46 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Animal.hpp"
-# include "Dog.hpp"
-# include "Cat.hpp"
-# include "WrongCat.hpp"
+# ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-int main()
+# include <iostream>
+
+class Brain
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->MakeSound(); //will output the cat sound!
-	j->MakeSound();
-	meta->MakeSound();
-	
-	return 0;
-}
+	protected:
+		std::string ideas[100];
+	public:
+		Brain();
+		Brain(const Brain &copy);
+		Brain &operator=(const Brain &assign);
+		~Brain();
+} ;
+
+# endif

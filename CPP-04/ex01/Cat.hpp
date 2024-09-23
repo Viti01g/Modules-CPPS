@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:36:30 by VR                #+#    #+#             */
-/*   Updated: 2024/09/23 13:55:24 by VR               ###   ########.fr       */
+/*   Created: 2024/09/18 13:36:17 by VR                #+#    #+#             */
+/*   Updated: 2024/09/23 20:36:30 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Animal.hpp"
-# include "Dog.hpp"
-# include "Cat.hpp"
-# include "WrongCat.hpp"
+# ifndef CAT_HPP
+# define CAT_HPP
 
-int main()
+# include "Animal.hpp"
+# include "Brain.hpp"
+
+class Cat : public Animal, public Brain
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->MakeSound(); //will output the cat sound!
-	j->MakeSound();
-	meta->MakeSound();
-	
-	return 0;
-}
+	private:
+		Brain *brain;
+	public:
+		Cat();
+		virtual ~Cat();
+		Cat(const Cat &copy);
+		Cat &operator=(const Cat &assign);
+
+		void MakeSound() const;
+
+} ;
+
+# endif
