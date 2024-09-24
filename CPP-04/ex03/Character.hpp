@@ -6,7 +6,16 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:47:39 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/09/24 13:47:41 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/09/24 19:19:29 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# ifndef CHARACTER_HPP
+# define CHARACTER_HPP
+
+class Character
+{
+
+} ;
+
+# endif
