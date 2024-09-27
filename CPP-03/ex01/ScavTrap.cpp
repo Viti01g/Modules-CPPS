@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:45:38 by VR                #+#    #+#             */
-/*   Updated: 2024/09/13 18:20:24 by VR               ###   ########.fr       */
+/*   Updated: 2024/09/26 16:56:10 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap()
 	return ;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &cpy)
+ScavTrap::ScavTrap(const ScavTrap &cpy) : ClapTrap()
 {
 	std::cout << "Copy constructor called" << std::endl;
 	if (this != &cpy)

@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 17:48:40 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/06/28 17:55:59 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/09/25 20:19:46 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	main()
 	zombie = newZombie("Julian");
 	randomChump("Govi");
 	randomChump("Pipex");
+	zombie->Announce();
 	delete zombie;
 	return 0;
 }
