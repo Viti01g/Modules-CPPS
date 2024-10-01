@@ -6,9 +6,17 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:13:23 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/09/24 19:22:03 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:56:05 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
 
 int main()
 {

@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 17:45:31 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/09/26 17:58:25 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:39:14 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Cure::Cure(const Cure& other) : AMateria("cure")
 {
 	if (INFO == 1)
 		std::cout << "Cure copy constructor called" << std::endl;
-	type = other.type;
+	_type = other._type;
 }
 
 Cure::~Cure()
@@ -36,7 +36,7 @@ Cure& Cure::operator=(const Cure& other)
 	if (INFO == 1)
 		std::cout << "Cure copy assignment operator called" << std::endl;
 	if (this != &other)
-		this->type = other.type;
+		this->_type = other._type;
 	return *this;
 }
 

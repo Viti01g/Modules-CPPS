@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 17:58:36 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/09/26 17:59:03 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:40:08 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Ice::Ice(const Ice& other) : AMateria("ice")
 {
 	if (INFO == 1)
 		std::cout << "Ice copy constructor called" << std::endl;
-	type = other.type;
+	_type = other._type;
 }
 
 Ice::~Ice(void)
@@ -36,7 +36,7 @@ Ice& Ice::operator=(const Ice& other)
 	if (INFO == 1)
 		std::cout << "Ice copy assignment operator called" << std::endl;
 	if (this != &other)
-		this->type = other.type;
+		this->_type = other._type;
 	return *this;
 }
 

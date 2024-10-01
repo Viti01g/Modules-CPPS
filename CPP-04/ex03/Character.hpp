@@ -6,19 +6,16 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:47:39 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/09/25 13:00:45 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:45:51 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-# ifndef INFO
-# define INFO 4
-# endif
-
 # include "ICharacter.hpp"
 # include <iostream>
+# include "info.hpp"
 
 class Character : public ICharacter
 {

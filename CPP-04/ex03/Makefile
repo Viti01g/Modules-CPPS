@@ -6,7 +6,7 @@
 #    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/24 13:13:47 by vruiz-go          #+#    #+#              #
-#    Updated: 2024/09/24 13:14:36 by vruiz-go         ###   ########.fr        #
+#    Updated: 2024/10/01 13:24:46 by vruiz-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ COLOR_OFF = \033[0m
 
 NAME = ex03
 
-SRC = main.cpp 
+SRC = main.cpp AMateria.cpp Ice.cpp Character.cpp Cure.cpp MateriaSource.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

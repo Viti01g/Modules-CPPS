@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:50:59 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/09/25 12:53:00 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/01 14:14:42 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include "AMateria.hpp"
+# include <string>
+
+class AMateria;
 
 class ICharacter
 {
