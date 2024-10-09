@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:53:34 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/08 19:16:12 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/09 16:02:49 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <exception>
 # include <string>
 
 class Bureaucrat
 {
 	private:
-		const std::string 	_name;
-		int					_range;
+		const std::string	_name;
+		unsigned int		_range;
 	public:
 		Bureaucrat();
 		Bureaucrat(const std::string name, int range);
@@ -28,8 +29,8 @@ class Bureaucrat
 		Bureaucrat(const Bureaucrat &copy);
 		Bureaucrat &operator=(const Bureaucrat &assign);
 
-		int getGrade();
-		std::string getName();
+		unsigned int getGrade() const;
+		std::string getName() const;
 		void	IncrementGrade();
 		void	DecrementGrade();
 

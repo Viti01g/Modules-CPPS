@@ -6,7 +6,7 @@
 #    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:50:59 by vruiz-go          #+#    #+#              #
-#    Updated: 2024/10/08 15:57:43 by vruiz-go         ###   ########.fr        #
+#    Updated: 2024/10/09 16:39:09 by vruiz-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex02
+NAME = ex00
 
-SRC = main.cpp 
+SRC = main.cpp Bureaucrat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
