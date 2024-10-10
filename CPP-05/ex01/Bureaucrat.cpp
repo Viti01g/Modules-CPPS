@@ -6,13 +6,13 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:53:29 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/10 19:01:22 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/10 19:17:45 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("Anonimo") , _range(75)
+Bureaucrat::Bureaucrat()
 {
 	std::cout << "Bureaucrat default constructor called." << std::endl;
 	return ;
@@ -30,7 +30,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade)
 	return ;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy) : _name(copy._name)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {
 	if (this != &copy)
 		this->_range = copy._range;
@@ -73,6 +73,21 @@ void	Bureaucrat::DecrementGrade()
 	if (this->_range < 150)
 		this->_range++;
 	return ;
+}
+
+void	Bureaucrat::signForm(Form &Form)
+{
+	if (Form.getSigned())
+	{
+		std::cout << this->getName() << " couldn’t sign " << Form.getName()	<< " because it was already signed!" << std::endl;
+		return ;	
+	}
+	Form.beSigned(*this);
+	if (Form.getSigned())
+		std::cout << this->getName() << " signed " << Form.getName() << std::endl;
+	else if (!Form.getSigned())
+		std::cout << this->getName() << " couldn’t sign " << Form.getName() 
+							<< " because has not enough grade!" << std::endl;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
