@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:34:20 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/10 19:22:06 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:14:50 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,19 @@ Form::Form() : _name("Anonimo"), iSigned(false), gr_sign(1), gr_exec(1)
 {
 	std::cout << "Default Form constructor called." << std::endl;
 	return ;
+}
+
+Form::Form(const std::string name, unsigned int _gr_sign, unsigned int _gr_exec) : _name(name), gr_sign(_gr_sign), gr_exec(_gr_exec)
+{
+    std::cout << "Form constructor called" << std::endl;
+    if (gr_sign < 1)
+        throw Form::GradeTooHighException();
+    else if (gr_sign > 150)
+        throw Form::GradeTooLowException();
+    if (gr_exec < 1)
+        throw Form::GradeTooHighException();
+    else if (gr_exec > 150)
+        throw Form::GradeTooLowException();
 }
 
 Form::~Form()
@@ -62,7 +75,17 @@ unsigned int Form::getGrExec() const
 
 void	Form::beSigned(Bureaucrat sign)
 {
-	
+	try
+	{
+		if (sign.getGrade() <= this->getGrSign())
+			this->iSigned = true;
+		else
+			throw Form::GradeTooLowException();
+	}
+	catch (std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }
 
 const char *Form::GradeTooHighException::what() const throw()
