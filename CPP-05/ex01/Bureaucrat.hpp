@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:53:34 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/11 15:57:40 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/14 13:22:54 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Form;
 
 class Bureaucrat
 {
-	private:
+	protected:
 		const std::string	_name;
 		unsigned int		_range;
 	public:

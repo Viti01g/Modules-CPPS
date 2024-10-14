@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:32:32 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/11 16:00:51 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/14 13:21:53 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,18 @@
 
 int	main(void)
 {
-	Bureaucrat ivan("Ivan", 4);
-	Bureaucrat carlos("Carlos", 55);
-	Form workContract("Work Contract", 50, 45);
-	Form wrongContract1("Work Contract", 0, 34);
-	Form wrongContract2("Work Contract", 151, 34);
-	Form wrongContract3("Work Contract", 33, 0);
-	Form wrongContract4("Work Contract", 33, 151);
+{
+	Bureaucrat	bur("Bob", 1);
+	std::cout << "aqui" << std::endl;
+	Form		form("form 28B", 10, 10);
+	Form		form2("form 28C", 10, 10);
 
-	std::cout << workContract << std::endl;
-	
-	carlos.signForm(workContract);
-	ivan.signForm(workContract);
-	ivan.signForm(workContract);
-
-	std::cout << workContract << std::endl;
-	
-	return 0;
+	std::cout << form << std::endl;
+	std::cout << form2 << std::endl;
+	bur.signForm(form);
+	bur.DecrementGrade();
+	bur.signForm(form2);
+	std::cout << form << std::endl;
+	std::cout << form2 << std::endl;
+}
 }

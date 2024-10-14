@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:53:29 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/10 19:01:22 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/14 13:42:59 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ Bureaucrat::Bureaucrat() : _name("Anonimo") , _range(75)
 Bureaucrat::Bureaucrat(const std::string name, int grade)
 {
 	this->_name == name;
-	if (grade <= 1)
+	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	if (grade >= 150)
+	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	this->_range = grade;
 	std::cout << "Bureaucrat constructor called." << std::endl;
