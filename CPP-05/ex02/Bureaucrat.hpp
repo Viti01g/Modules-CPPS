@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:53:34 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/14 16:38:31 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/15 17:16:21 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class Bureaucrat
 		void	DecrementGrade();
 
 		void	signForm(AForm &AForm);
+		void	executeForm(AForm const & form);
 
 		class GradeTooHighException : public std::exception
 		{

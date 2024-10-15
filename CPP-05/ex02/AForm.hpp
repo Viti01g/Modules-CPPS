@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:34:32 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/15 14:01:24 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:26:53 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ class AForm
 
 		std::string getName() const;
 		bool getSigned() const;
+		const std::string getTarget(void) const;
 		unsigned int getGrSign() const;
 		unsigned int getGrExec() const;
 		
 		virtual void execute(Bureaucrat const & executor) const = 0;
 		void beSigned(const Bureaucrat signer);
-		const std::string getTarget(void) const;
 
 		class GradeTooLowException : public std::exception
 		{

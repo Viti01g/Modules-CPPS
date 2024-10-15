@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:53:29 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/14 16:38:04 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/15 17:16:56 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,17 @@ void	Bureaucrat::signForm(AForm &AForm)
 	else if (!AForm.getSigned())
 		std::cout << this->getName() << " couldn’t sign " << AForm.getName() 
 							<< " because has not enough grade!" << std::endl;
+}
+
+void Bureaucrat::executeForm(AForm const & form)
+{
+	if (form.getSigned() && this->getGrade() <= form.getGrExec())
+	{
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+		form.execute(*this);
+	}
+	else
+		std::cerr << this->getName() << " could't execute " << form.getName() << std::endl;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()

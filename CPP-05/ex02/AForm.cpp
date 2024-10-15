@@ -24,13 +24,13 @@ AForm::AForm(const std::string name, unsigned int _gr_sign, unsigned int _gr_exe
 		std::cout << "AForm copy constructor called" << std::endl;
 	try
 	{
-		if (_gr_sign < 1)
+		if (gr_sign < 1)
 			throw AForm::GradeTooHighException();
-		else if (_gr_sign > 150)
+		else if (gr_sign > 150)
 			throw AForm::GradeTooLowException();
-		if (_gr_exec < 1)
+		if (gr_exec < 1)
 			throw AForm::GradeTooHighException();
-		else if (_gr_exec > 150)
+		else if (gr_exec > 150)
 			throw AForm::GradeTooLowException();
 	}
 	catch (std::exception & e)
@@ -39,19 +39,19 @@ AForm::AForm(const std::string name, unsigned int _gr_sign, unsigned int _gr_exe
 	}
 }
 
-AForm::AForm(const std::string name, std::string target, unsigned int _gr_sign, unsigned int _gr_exec) : _name(name), _target("none"), iSigned(false), gr_sign(_gr_sign), gr_exec(_gr_exec)
+AForm::AForm(const std::string name, std::string target, unsigned int _gr_sign, unsigned int _gr_exec) : _name(name), _target(target), iSigned(false), gr_sign(_gr_sign), gr_exec(_gr_exec)
 {
 	if (INFO == 1)
 		std::cout << "AForm copy constructor called" << std::endl;
 	try
 	{
-		if (_gr_sign < 1)
+		if (gr_sign < 1)
 			throw AForm::GradeTooHighException();
-		else if (_gr_sign > 150)
+		else if (gr_sign > 150)
 			throw AForm::GradeTooLowException();
-		if (_gr_exec < 1)
+		if (gr_exec < 1)
 			throw AForm::GradeTooHighException();
-		else if (_gr_exec > 150)
+		else if (gr_exec > 150)
 			throw AForm::GradeTooLowException();
 	}
 	catch (std::exception & e)
@@ -92,6 +92,11 @@ bool AForm::getSigned() const
 	return (this->iSigned);
 }
 
+const std::string AForm::getTarget() const
+{
+	return (this->_target);
+}
+
 unsigned int AForm::getGrSign() const
 {
 	return (this->gr_sign);
@@ -125,6 +130,11 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
 	return "Grade too low :((";
+}
+
+const char *AForm::NotSignedException::what() const throw()
+{
+	return "No has hecho sign";
 }
 
 std::ostream& operator<<( std::ostream& out, AForm& AForm )
