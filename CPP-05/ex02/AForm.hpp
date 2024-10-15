@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:34:32 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/14 19:20:35 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/15 14:01:24 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,14 @@ class AForm
 {
 	private:
 		const std::string	_name;
+		const std::string	_target;
 		bool				iSigned;
 		const unsigned int	gr_sign;
 		const unsigned int	gr_exec;
 	public:
 		AForm();
 		AForm(const std::string name, unsigned int _gr_sign, unsigned int _gr_exec);
-		AForm(const std::string name, std::string target, int requiredGradeSign, int requiredGradeExecute);
+		AForm(const std::string name, std::string target, unsigned int _gr_sign, unsigned int _gr_exec);
 		~AForm();
 		AForm(const AForm &copy);
 		AForm &operator=(const AForm &assign);

@@ -20,15 +20,44 @@ AForm::AForm() : _name("Anonimo"), iSigned(false), gr_sign(1), gr_exec(1)
 
 AForm::AForm(const std::string name, unsigned int _gr_sign, unsigned int _gr_exec) : _name(name), gr_sign(_gr_sign), gr_exec(_gr_exec)
 {
-    std::cout << "AForm constructor called" << std::endl;
-    if (gr_sign < 1)
-        throw AForm::GradeTooHighException();
-    else if (gr_sign > 150)
-        throw AForm::GradeTooLowException();
-    if (gr_exec < 1)
-        throw AForm::GradeTooHighException();
-    else if (gr_exec > 150)
-        throw AForm::GradeTooLowException();
+	if (INFO == 1)
+		std::cout << "AForm copy constructor called" << std::endl;
+	try
+	{
+		if (_gr_sign < 1)
+			throw AForm::GradeTooHighException();
+		else if (_gr_sign > 150)
+			throw AForm::GradeTooLowException();
+		if (_gr_exec < 1)
+			throw AForm::GradeTooHighException();
+		else if (_gr_exec > 150)
+			throw AForm::GradeTooLowException();
+	}
+	catch (std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+}
+
+AForm::AForm(const std::string name, std::string target, unsigned int _gr_sign, unsigned int _gr_exec) : _name(name), _target("none"), iSigned(false), gr_sign(_gr_sign), gr_exec(_gr_exec)
+{
+	if (INFO == 1)
+		std::cout << "AForm copy constructor called" << std::endl;
+	try
+	{
+		if (_gr_sign < 1)
+			throw AForm::GradeTooHighException();
+		else if (_gr_sign > 150)
+			throw AForm::GradeTooLowException();
+		if (_gr_exec < 1)
+			throw AForm::GradeTooHighException();
+		else if (_gr_exec > 150)
+			throw AForm::GradeTooLowException();
+	}
+	catch (std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }
 
 AForm::~AForm()
