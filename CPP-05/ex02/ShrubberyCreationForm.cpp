@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:41:59 by VR                #+#    #+#             */
-/*   Updated: 2024/10/14 19:24:35 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/16 12:40:52 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 			throw AForm::NotSignedException();
 		if (executor.getGrade() > this->getGrExec())
 			throw AForm::GradeTooLowException();
-		output.open(this->getTarget() + "_shrubbery", std::ios::out);
+		output.open((this->getTarget() + "_shrubbery").c_str(), std::ios::out);
 		if (!output.is_open())
 			throw ShrubberyCreationForm::CannotOpenFileException();
 		else
