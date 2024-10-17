@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:36:35 by VR                #+#    #+#             */
-/*   Updated: 2024/09/23 13:15:48 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/17 12:18:53 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
 	this->type = "Cat";
 	std::cout << "Cat default constructor called." << std::endl;
 	return ;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+Cat::Cat(const Cat &copy) : AAnimal(copy)
 {
 	if (this != &copy)
 		this->type = copy.type;

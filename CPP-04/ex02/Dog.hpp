@@ -6,16 +6,16 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:36:27 by VR                #+#    #+#             */
-/*   Updated: 2024/09/24 13:03:02 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:19:11 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef DOG_HPP
 # define DOG_HPP
 
-# include "A_Animal.hpp"
+# include "AAnimal.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 	public:
 		Dog();

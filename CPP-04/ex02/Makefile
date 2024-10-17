@@ -6,7 +6,7 @@
 #    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 13:37:11 by VR                #+#    #+#              #
-#    Updated: 2024/09/24 12:33:44 by vruiz-go         ###   ########.fr        #
+#    Updated: 2024/10/17 12:11:03 by vruiz-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ COLOR_OFF = \033[0m
 
 NAME = ex02
 
-SRC = main.cpp A_Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+SRC = main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

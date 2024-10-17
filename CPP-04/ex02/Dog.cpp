@@ -6,21 +6,21 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:36:24 by VR                #+#    #+#             */
-/*   Updated: 2024/09/24 13:02:57 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:19:14 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "A_Animal.hpp"
+# include "AAnimal.hpp"
 # include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog() : AAnimal()
 {
 	this->type = "Dog";
 	std::cout << "Dog default constructor called." << std::endl;
 	return ;
 }
 
-Dog::Dog(const Dog &copy) : Animal(copy)
+Dog::Dog(const Dog &copy) : AAnimal(copy)
 {
 	if (this != &copy)
 		this->type = copy.type;

@@ -6,16 +6,16 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:36:17 by VR                #+#    #+#             */
-/*   Updated: 2024/09/24 13:00:58 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:18:51 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef CAT_HPP
 # define CAT_HPP
 
-# include "A_Animal.hpp"
+# include "AAnimal.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 	public:
 		Cat();

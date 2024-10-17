@@ -6,22 +6,22 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:36:30 by VR                #+#    #+#             */
-/*   Updated: 2024/09/24 13:10:26 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:19:39 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "A_Animal.hpp"
+# include "AAnimal.hpp"
 # include "Dog.hpp"
 # include "Cat.hpp"
 # include "WrongCat.hpp"
 
 int main()
 {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	const AAnimal* j = new Dog();
+	const AAnimal* i = new Cat();
 	delete j;//should not create a leak
 	delete i;
-	Animal	*meta[50];
+	AAnimal	*meta[50];
 	for (int i = 0; i < 25; i++)
 		meta[i] = new Dog();
 	for (int i = 25; i < 50; i++)
