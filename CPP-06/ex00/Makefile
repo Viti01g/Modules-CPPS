@@ -5,21 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/18 13:37:11 by VR                #+#    #+#              #
-#    Updated: 2024/10/17 15:07:26 by vruiz-go         ###   ########.fr        #
+#    Created: 2024/10/08 15:50:59 by vruiz-go          #+#    #+#              #
+#    Updated: 2024/10/21 14:14:48 by vruiz-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #	COLOURS	#
 
-GREEN = \033[0:32m
+GREEN = \033[92m
 COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex01
+NAME = ex00
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRC = main.cpp Bureaucrat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -32,6 +32,7 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJ)
+	@clear
 	@$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 	@echo "$(GREEN)<+> $(NAME) has been created! <+>$(COLOR_OFF)"
 

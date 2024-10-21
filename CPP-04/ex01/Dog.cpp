@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:36:24 by VR                #+#    #+#             */
-/*   Updated: 2024/09/23 20:31:07 by VR               ###   ########.fr       */
+/*   Updated: 2024/10/17 15:06:11 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ Dog::Dog(const Dog &copy) : Animal(copy)
 	if (this != &copy)
 	{
 		this->type = copy.type;
-		delete brain;
 		this->brain = new Brain(*copy.brain);
 	}
 	std::cout << "Dog copy constructor called." << std::endl;
