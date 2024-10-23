@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:53:29 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/14 13:42:59 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:46:01 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &copy) : _name(copy._name)
 Bureaucrat::~Bureaucrat()
 {
 	std::cout << "Destructor called." << std::endl;
+	return ;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &assign)
