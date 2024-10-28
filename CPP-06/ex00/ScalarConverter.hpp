@@ -6,15 +6,25 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:01:05 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/23 13:55:04 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/28 13:08:05 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef SCALARCONVERTER_HPP
 # define SCALARCONVERTER_HPP
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <cstring>
+#include <climits>
+#include <cmath>
+
+enum	scalarType {
+	CHAR,
+	INT,
+	FLOAT,
+	DOUBLE,
+	ERROR
+};
 
 class ScalarConverter
 {
@@ -24,7 +34,7 @@ class ScalarConverter
 		ScalarConverter(const ScalarConverter &copy);
 		ScalarConverter &operator=(const ScalarConverter &assign);
 
-		static void	converter(std::string &literal);
+		static void	converter(char *literal);
 } ;
 
 # endif

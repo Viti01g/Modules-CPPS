@@ -6,7 +6,7 @@
 #    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:50:59 by vruiz-go          #+#    #+#              #
-#    Updated: 2024/10/21 14:14:48 by vruiz-go         ###   ########.fr        #
+#    Updated: 2024/10/28 13:17:30 by vruiz-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ COLOR_OFF = \033[0m
 
 NAME = ex00
 
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp ScalarConverter.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
