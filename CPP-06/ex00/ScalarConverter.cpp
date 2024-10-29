@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:01:10 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/28 13:24:45 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/10/29 16:38:54 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	printChar(int c)
 {
 	std::cout << "char: ";
 	if (c >= CHAR_MIN && c <= CHAR_MAX) {
-		std::isprint( c ) ? std::cout << '\'' << static_cast<char>( c ) << "\'\n" : std::cout << "Non displayable.\n";
+		std::isprint(c) ? std::cout << '\'' << static_cast<char>(c) << "\'\n" : std::cout << "Non displayable.\n";
 	} else {
 		std::cout << "impossible.\n";
 	}
@@ -49,7 +49,7 @@ static void	printChar(int c)
 static void	charCase(char literal)
 {
 	printChar( static_cast<int>(literal) );
-	std::cout << "int: " << static_cast<int>( literal ) << '\n' << "float: " << static_cast<float>( literal ) << ".0f\n" << "double: " << static_cast<double>( literal ) << ".0" << std::endl;
+	std::cout << "int: " << static_cast<int>(literal) << '\n' << "float: " << static_cast<float>(literal) << ".0f\n" << "double: " << static_cast<double>(literal) << ".0" << std::endl;
 
 }
 
@@ -71,8 +71,8 @@ static void	fractionalCase(double literal, bool isNan)
 		std::cout << "impossible.\n";
 	else
 		std::cout << static_cast<int>(literal) << '\n';
-	std::cout << "float: " << static_cast<float>(literal) << (((floor(literal) == literal) && ( literal > -1000000 && literal < 1000000 )) ? ".0f\n" : "f\n");
-	std::cout << "double: " << literal << (((floor(literal) == literal) && ( literal > -1000000 && literal < 1000000 )) ? ".0\n" : "\n");
+	std::cout << "float: " << static_cast<float>(literal) << (((floor(literal) == literal) && (literal > -1000000 && literal < 1000000)) ? ".0f\n" : "f\n");
+	std::cout << "double: " << literal << (((floor(literal) == literal) && (literal > -1000000 && literal < 1000000)) ? ".0\n" : "\n");
 }
 
 static scalarType findType(char *literal)
@@ -82,17 +82,14 @@ static scalarType findType(char *literal)
 		return CHAR;
 	char *litEnd = NULL;
 	long nbr = strtol(literal, &litEnd, 10);
-
 	if (!litEnd[0] && litLen <= 11 && nbr >= INT_MIN && nbr <= INT_MAX)
 		return INT;
 	litEnd = NULL;
 	strtod(literal, &litEnd);
-
 	if (!litEnd[0])
 		return DOUBLE;
 	if (strcmp(litEnd, "f") == 0)
 		return FLOAT;
-
 	return ERROR;
 }
 

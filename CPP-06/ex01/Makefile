@@ -6,7 +6,7 @@
 #    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:50:59 by vruiz-go          #+#    #+#              #
-#    Updated: 2024/10/29 15:25:33 by vruiz-go         ###   ########.fr        #
+#    Updated: 2024/10/29 15:25:44 by vruiz-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex00
+NAME = ex01
 
 SRC = main.cpp ScalarConverter.cpp
 
