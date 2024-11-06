@@ -6,11 +6,11 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:57:09 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/11/05 13:15:37 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:48:09 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
+# ifndef WHATEVER_HPP
 # define WHATEVER_HPP
 
 template <typename T>
@@ -39,4 +39,4 @@ T max(T& value1, T& value2)
 		return value2;
 }
 
-#endif
+# endif
