@@ -6,18 +6,17 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:52:21 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/11/06 17:52:29 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:38:03 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 #include <cstdlib>
 
-int main( void )
+int main()
 {
 	srand(static_cast<unsigned int>(time(0)));
 	{
-		/* OCCF and empty array test */
 		Array<int> a;
 		Array<int> b( 10 );
 		Array<int> c = a;
@@ -31,7 +30,6 @@ int main( void )
 	}
 	std::cout << "----------------------------------------------------\n";
 	{
-		/* Fill array test */
 		int n = 5;
 		Array<int> a(n);
 
@@ -46,7 +44,6 @@ int main( void )
 	}
 	std::cout << "----------------------------------------------------\n";
 	{
-		/* Invalid index management test */
 		try {
 			int n = 5;
 			Array<int> a(n);
@@ -55,8 +52,6 @@ int main( void )
 				int random = rand();
 				a[i] = random;
 			}
-
-			// access to invalid index -1:
 			a[-1] = 10;
 
 			for (int i = 0; i < n; i++) {

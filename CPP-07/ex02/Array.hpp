@@ -6,7 +6,7 @@
 /*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:37:03 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/11/06 17:51:47 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:36:45 by vruiz-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 # include <iostream>
 
 template <typename T>
-class Array {
+class Array
+{
 	private:
 		T 		*arr;
 		size_t	len;
@@ -44,7 +45,8 @@ class Array {
 
 		~Array() { delete[] arr; }
 
-		T& operator[](size_t index) {
+		T& operator[](size_t index)
+		{
 			if (index >= len)
 				throw std::out_of_range("ERR. Index out of range");
 
