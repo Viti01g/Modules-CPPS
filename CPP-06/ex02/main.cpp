@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:58:21 by vruiz-go          #+#    #+#             */
-/*   Updated: 2024/10/30 17:37:49 by vruiz-go         ###   ########.fr       */
+/*   Updated: 2025/07/10 17:23:12 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,10 @@ int main( void ) {
 		Base *a = generate();
 
 		/* Identify with pointer */
-		identify( a );
+		identify(a);
 
 		/* Identify with reference */
-		identify( *a );
+		identify(*a);
 
 		delete a;
 	}
