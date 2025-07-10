@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 13:36:11 by VR                #+#    #+#             */
-/*   Updated: 2025/06/30 14:02:55 by VR               ###   ########.fr       */
+/*   Updated: 2025/07/07 13:44:03 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <string>
 # include <vector>
+# include <climits>
  
 class Span 
 {
@@ -36,15 +37,15 @@ class Span
 		Span& operator=(const Span& other);
 		~Span();
 
-		int shortestSpan( void ) const;
-		void addNumber( int nbr );
-		int longestSpan( void ) const;	
+		int shortestSpan(void) const;
+		void addNumber(int nbr);
+		int longestSpan(void) const;	
 		template <typename T>
 		void addManyNumbers(T it_begin, T it_end)
 		{
 			while (it_begin < it_end)
 			{
-				this->addNumber( *it_begin );
+				this->addNumber(*it_begin);
 				it_begin++;
 			}
 		}
