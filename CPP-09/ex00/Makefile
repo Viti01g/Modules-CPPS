@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vruiz-go <vruiz-go@student.42.fr>          +#+  +:+       +#+         #
+#    By: VR <VR@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:50:59 by vruiz-go          #+#    #+#              #
-#    Updated: 2024/11/11 17:44:52 by vruiz-go         ###   ########.fr        #
+#    Updated: 2025/07/14 17:26:47 by VR               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex00
+NAME = btc
 
 SRC = main.cpp
 

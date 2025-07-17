@@ -6,7 +6,7 @@
 #    By: VR <VR@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:50:59 by vruiz-go          #+#    #+#              #
-#    Updated: 2025/07/10 16:38:18 by VR               ###   ########.fr        #
+#    Updated: 2025/07/17 19:00:51 by VR               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex02
+NAME = PmergeMe
 
-SRC = main.cpp
+SRC = main.cpp PmergeMe.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

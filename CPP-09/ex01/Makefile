@@ -6,7 +6,7 @@
 #    By: VR <VR@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 15:50:59 by vruiz-go          #+#    #+#              #
-#    Updated: 2025/07/10 16:38:15 by VR               ###   ########.fr        #
+#    Updated: 2025/07/15 15:53:44 by VR               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ COLOR_OFF = \033[0m
 
 #	VARIABLES	#
 
-NAME = ex01
+NAME = RPN
 
-SRC = main.cpp
+SRC = main.cpp RPN.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
