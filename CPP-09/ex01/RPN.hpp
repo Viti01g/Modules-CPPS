@@ -6,7 +6,7 @@
 /*   By: VR <VR@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 17:26:59 by VR                #+#    #+#             */
-/*   Updated: 2025/07/17 18:53:44 by VR               ###   ########.fr       */
+/*   Updated: 2025/07/26 15:43:02 by VR               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <iostream>
 # include <string>
 # include <fstream>
+# include <cstring>
 
 #define ADD			43
 #define SUBTRACT	45
